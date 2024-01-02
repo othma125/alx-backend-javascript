@@ -1,3 +1,5 @@
+/* eslint-disable new-cap */
+/* eslint-disable import/extensions */
 import getNeighborhoodsList from './2-arrow.js';
 
 const neighborhoodsList = new getNeighborhoodsList();
