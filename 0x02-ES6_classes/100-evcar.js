@@ -29,7 +29,7 @@ export default class EVCar extends Car {
   }
 
   cloneCar() {
-    const { brand, motor, color } = this;
-    return new Car(brand, motor, color);
+    // eslint-disable-next-line no-underscore-dangle
+    return new Car(this._brand, this._motor, this._color);
   }
 }

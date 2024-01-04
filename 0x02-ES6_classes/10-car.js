@@ -1,24 +1,23 @@
 export default class Car {
   constructor(brand, motor, color) {
-    if (typeof brand !== 'string') {
-      throw TypeError('brand must be a string');
-    }
     // eslint-disable-next-line no-underscore-dangle
     this._brand = brand;
-    if (typeof motor !== 'string') {
-      throw TypeError('motor must be a string');
-    }
     // eslint-disable-next-line no-underscore-dangle
     this._motor = motor;
-    if (typeof color !== 'string') {
-      throw TypeError('color must be a string');
-    }
     // eslint-disable-next-line no-underscore-dangle
     this._color = color;
   }
 
+  // eslint-disable-next-line class-methods-use-this
   cloneCar() {
     // eslint-disable-next-line no-underscore-dangle
-    return { ...this };
+    const newCar = new Car(this._brand, this._motor, this._color);
+    // eslint-disable-next-line no-underscore-dangle
+    newCar._brand = undefined;
+    // eslint-disable-next-line no-underscore-dangle
+    newCar._motor = undefined;
+    // eslint-disable-next-line no-underscore-dangle
+    newCar._color = undefined;
+    return newCar;
   }
 }
