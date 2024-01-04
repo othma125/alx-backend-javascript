@@ -1,7 +1,13 @@
 // eslint-disable-next-line max-classes-per-file
 export class HolbertonClass {
   constructor(year, location) {
+    if (typeof year !== 'number') {
+      throw TypeError('year must be a number');
+    }
     this._year = year;
+    if (typeof location !== 'string') {
+      throw TypeError('location must be a string');
+    }
     this._location = location;
   }
 
