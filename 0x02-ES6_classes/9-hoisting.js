@@ -4,40 +4,59 @@ export class HolbertonClass {
     if (typeof year !== 'number') {
       throw TypeError('year must be a number');
     }
+    // eslint-disable-next-line no-underscore-dangle
     this._year = year;
     if (typeof location !== 'string') {
       throw TypeError('location must be a string');
     }
+    // eslint-disable-next-line no-underscore-dangle
     this._location = location;
   }
 
   get year() {
+    // eslint-disable-next-line no-underscore-dangle
     return this._year;
   }
 
   get location() {
+    // eslint-disable-next-line no-underscore-dangle
     return this._location;
   }
 }
 
 export class StudentHolberton {
   constructor(firstName, lastName, holbertonClass) {
+    // eslint-disable-next-line no-underscore-dangle
+    if (typeof firstName !== 'string') {
+      throw TypeError('firstName must be a string');
+    }
+    // eslint-disable-next-line no-underscore-dangle
     this._firstName = firstName;
+    if (typeof lastName !== 'string') {
+      throw TypeError('lastName must be a string');
+    }
+    // eslint-disable-next-line no-underscore-dangle
     this._lastName = lastName;
+    if (holbertonClass instanceof HolbertonClass === false) {
+      throw TypeError('holbertonClass must be a HolbertonClass');
+    }
+    // eslint-disable-next-line no-underscore-dangle
     this._holbertonClass = holbertonClass;
   }
 
   get fullName() {
+    // eslint-disable-next-line no-underscore-dangle
     return `${this._firstName} ${this._lastName}`;
   }
 
   get holbertonClass() {
+    // eslint-disable-next-line no-underscore-dangle
     return this._holbertonClass;
   }
 
   get fullStudentDescription() {
-    return `${this._firstName} ${this._lastName} - \
-  ${this._holbertonClass.year} - ${this._holbertonClass.location}`;
+    // eslint-disable-next-line no-underscore-dangle
+    return `${this._firstName} ${this._lastName} - ${this._holbertonClass.year} - ${this._holbertonClass.location}`;
   }
 }
 
