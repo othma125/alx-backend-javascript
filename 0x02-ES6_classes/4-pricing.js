@@ -35,13 +35,12 @@ export default class Pricing {
   }
 
   static convertPrice(amount, conversionRate) {
-    // eslint-disable-next-line no-undef
-    result = 0;
-    if (typeof amount === 'number' && typeof conversionRate === 'number') {
-      // eslint-disable-next-line no-undef
-      result = amount * conversionRate;
-    } else throw TypeError('Amount must be a number');
-    // eslint-disable-next-line no-undef
-    return result;
+    if (typeof amount !== 'number') {
+      throw new TypeError('amount must be a number');
+    }
+    if (typeof conversionRate !== 'number') {
+      throw new TypeError('conversionRate must be a number');
+    }
+    return amount * conversionRate;
   }
 }
