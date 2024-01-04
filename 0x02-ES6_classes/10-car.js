@@ -17,23 +17,8 @@ export default class Car {
     this._color = color;
   }
 
-  get brand() {
-    // eslint-disable-next-line no-underscore-dangle
-    return this._brand;
-  }
-
-  get motor() {
-    // eslint-disable-next-line no-underscore-dangle
-    return this._motor;
-  }
-
-  get color() {
-    // eslint-disable-next-line no-underscore-dangle
-    return this._color;
-  }
-
   cloneCar() {
     // eslint-disable-next-line no-underscore-dangle
-    return new Car(this._brand, this._motor, this._color);
+    return { ...this };
   }
 }
