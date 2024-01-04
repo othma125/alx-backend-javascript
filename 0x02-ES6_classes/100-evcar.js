@@ -5,4 +5,9 @@ export default class EVCar extends Car {
     super(brand, motor, color);
     this.range = range;
   }
+
+  cloneCar() {
+    // eslint-disable-next-line no-underscore-dangle
+    return new this.constructor(this._brand, this._motor, this._color);
+  }
 }
