@@ -1,5 +1,5 @@
 // eslint-disable-next-line max-classes-per-file
-class HolbertonClass {
+export class HolbertonClass {
   constructor(year, location) {
     this._year = year;
     this._location = location;
@@ -14,7 +14,7 @@ class HolbertonClass {
   }
 }
 
-class StudentHolberton {
+export class StudentHolberton {
   constructor(firstName, lastName, holbertonClass) {
     this._firstName = firstName;
     this._lastName = lastName;
